@@ -3,31 +3,46 @@ import { motion } from "framer-motion";
 import { CheckCircle, Shield, Clock, Paintbrush, Droplets, SprayCan, Home, Star, Quote, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import aboutTeam from "@/assets/about-team.jpg";
+import interiorImg from "@/assets/interior-painting.jpg";
+import exteriorImg from "@/assets/exterior-painting.jpg";
+import epoxyImg from "@/assets/epoxy-floor.jpg";
+import pressureImg from "@/assets/pressure-washing.jpg";
+import cabinetImg from "@/assets/cabinet-painting.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
 
 const services = [
   {
     icon: Paintbrush,
     title: "Interior Painting",
+    img: interiorImg,
     desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again.",
   },
   {
     icon: Home,
     title: "Exterior Painting",
+    img: exteriorImg,
     desc: "Protect and beautify your property with our professional exterior painting services. We use durable, high-quality materials to ensure a long-lasting finish that withstands weather and time.",
   },
   {
     icon: Droplets,
     title: "Epoxy Floor Coatings",
+    img: epoxyImg,
     desc: "Our epoxy flooring systems are perfect for garages, patios, and commercial spaces. They provide a strong, durable, and modern finish that is easy to maintain and resistant to stains and damage.",
   },
   {
     icon: SprayCan,
     title: "Pressure Washing",
+    img: pressureImg,
     desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property.",
   },
   {
     icon: Paintbrush,
     title: "Cabinet Painting & Refinishing",
+    img: cabinetImg,
     desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space.",
   },
 ];
@@ -75,7 +90,6 @@ const HomePage = () => {
               From interior and exterior painting to epoxy floors and pressure washing, JGMB Painting delivers results you can trust.
             </motion.p>
 
-            {/* Trust bullets */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,17 +141,17 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Preview */}
+      {/* About Preview with image */}
       <section className="section-padding">
         <div className="container-site">
-          <AnimatedSection>
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
               <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">About Our Company</p>
               <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-6">
                 Built on Quality, Integrity, and Trust
               </h2>
               <p className="font-body text-lg leading-relaxed text-muted-foreground mb-4">
-                At JGMB Painting, we take pride in delivering high-quality painting services with professionalism, reliability, and attention to detail. With over 6 years of experience in the industry, our team specializes in both residential and commercial projects, helping homeowners and businesses transform their spaces with beautiful, long-lasting finishes.
+                At JGMB Painting, we take pride in delivering high-quality painting services with professionalism, reliability, and attention to detail. With over 6 years of experience in the industry, our team specializes in both residential and commercial projects.
               </p>
               <p className="font-body text-lg leading-relaxed text-muted-foreground mb-8">
                 Our mission is simple: to provide honest work, excellent craftsmanship, and complete customer satisfaction.
@@ -148,12 +162,15 @@ const HomePage = () => {
               >
                 Learn More About Us <ArrowRight size={16} />
               </Link>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <img src={aboutTeam} alt="JGMB Painting team" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Services Preview with images */}
       <section className="section-padding bg-muted/50">
         <div className="container-site">
           <AnimatedSection>
@@ -179,13 +196,21 @@ const HomePage = () => {
                   hidden: { opacity: 0, y: 8 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.32, 0.72, 0, 1] } },
                 }}
-                className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200"
+                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-200"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <service.icon size={20} className="text-primary" />
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full aspect-[16/10] object-cover"
+                  loading="lazy"
+                />
+                <div className="p-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <service.icon size={20} className="text-primary" />
+                  </div>
+                  <h3 className="font-sans font-semibold text-xl text-foreground mb-2">{service.title}</h3>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground">{service.desc}</p>
                 </div>
-                <h3 className="font-sans font-semibold text-xl text-foreground mb-2">{service.title}</h3>
-                <p className="font-body text-sm leading-relaxed text-muted-foreground">{service.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -237,6 +262,35 @@ const HomePage = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="section-padding bg-muted/50">
+        <div className="container-site">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Our Work</p>
+              <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground">
+                Recent Projects
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[gallery1, gallery2, gallery7, gallery5].map((img, i) => (
+              <AnimatedSection key={i} delay={i * 0.07}>
+                <img src={img} alt={`Project ${i + 1}`} className="w-full aspect-square object-cover rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-200" loading="lazy" />
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection className="text-center mt-10">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all duration-200"
+            >
+              View Full Gallery <ArrowRight size={16} />
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 

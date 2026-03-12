@@ -4,6 +4,10 @@ import PageBanner from "@/components/PageBanner";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 
+import aboutTeam from "@/assets/about-team.jpg";
+import paintingTeam from "@/assets/painting-team.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+
 const values = [
   { icon: Shield, title: "Integrity", desc: "We believe in honest work and transparent communication with every client." },
   { icon: Award, title: "Professionalism", desc: "Our team maintains the highest standards of conduct and quality on every project." },
@@ -20,15 +24,28 @@ const AboutPage = () => (
       subtitle="Professional painting and remodeling services built on quality, integrity, and customer satisfaction."
     />
 
-    {/* Story */}
+    {/* Story with team image */}
     <section className="section-padding">
       <div className="container-site">
-        <AnimatedSection>
-          <div className="max-w-3xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <AnimatedSection>
             <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-6">Our Story</h2>
             <div className="space-y-5 font-body text-lg leading-relaxed text-muted-foreground">
               <p>At JGMB Painting, we take pride in delivering high-quality painting services with professionalism, reliability, and attention to detail. With over 6 years of experience in the industry, our team specializes in both residential and commercial projects, helping homeowners and businesses transform their spaces with beautiful, long-lasting finishes.</p>
               <p>We offer a wide range of services including interior and exterior painting, epoxy flooring, pressure washing, and cabinet painting. Every project we take on is treated with care, using quality materials and proven techniques to ensure outstanding results.</p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <img src={aboutTeam} alt="JGMB Painting team" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" />
+          </AnimatedSection>
+        </div>
+
+        <AnimatedSection className="mt-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img src={paintingTeam} alt="Painting crew at work" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" />
+            </div>
+            <div className="order-1 lg:order-2 space-y-5 font-body text-lg leading-relaxed text-muted-foreground">
               <p>Our mission is simple: to provide honest work, excellent craftsmanship, and complete customer satisfaction. We believe that integrity and professionalism are the keys to making our clients happy, and that's the standard we bring to every job.</p>
               <p>Whether you're refreshing a single room, upgrading your floors with epoxy, or giving your entire property a new look, JGMB Painting is committed to delivering results you can trust.</p>
             </div>
@@ -76,17 +93,34 @@ const AboutPage = () => (
       </div>
     </section>
 
-    {/* Trust */}
+    {/* Results showcase */}
     <section className="section-padding">
       <div className="container-site">
         <AnimatedSection>
+          <div className="text-center mb-10">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-4">
+              Our Work Speaks for Itself
+            </h2>
+            <p className="font-body text-lg text-muted-foreground">See some of the spaces we've transformed.</p>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection>
+          <img src={gallery1} alt="Beautiful painted living room" className="w-full rounded-2xl object-cover aspect-[21/9] shadow-elevated" loading="lazy" />
+        </AnimatedSection>
+      </div>
+    </section>
+
+    {/* Trust */}
+    <section className="section-padding bg-primary text-primary-foreground">
+      <div className="container-site">
+        <AnimatedSection>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-6">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight mb-6">
               Why Homeowners and Businesses Trust Us
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {["6+ years of experience", "Residential & commercial", "Quality materials", "Dependable service", "Long-lasting finishes"].map((item) => (
-                <span key={item} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                <span key={item} className="px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium">
                   {item}
                 </span>
               ))}
