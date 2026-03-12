@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle, Shield, Clock, Paintbrush, Droplets, SprayCan, Home, Star, Quote, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hola.png";
 import aboutTeam from "@/assets/about-team.jpg";
 import interiorImg from "@/assets/interior-painting.jpg";
 import exteriorImg from "@/assets/exterior-painting.jpg";
