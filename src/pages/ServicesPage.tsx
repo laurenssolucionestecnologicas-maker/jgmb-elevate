@@ -1,0 +1,114 @@
+import { Link } from "react-router-dom";
+import { Paintbrush, Home, Droplets, SprayCan, ArrowRight } from "lucide-react";
+import PageBanner from "@/components/PageBanner";
+import AnimatedSection from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    icon: Paintbrush,
+    title: "Interior Painting",
+    desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again.",
+    bullets: ["Clean and professional results", "Walls, ceilings, trim & doors", "Ideal for homes and businesses"],
+  },
+  {
+    icon: Home,
+    title: "Exterior Painting",
+    desc: "Protect and beautify your property with our professional exterior painting services. We use durable, high-quality materials to ensure a long-lasting finish that withstands weather and time.",
+    bullets: ["Weather-resistant finishes", "Durable, high-quality materials", "Enhances curb appeal"],
+  },
+  {
+    icon: Droplets,
+    title: "Epoxy Floor Coatings",
+    desc: "Our epoxy flooring systems are perfect for garages, patios, and commercial spaces. They provide a strong, durable, and modern finish that is easy to maintain and resistant to stains and damage.",
+    bullets: ["Stain and damage resistant", "Modern, sleek appearance", "Perfect for garages & commercial"],
+  },
+  {
+    icon: SprayCan,
+    title: "Pressure Washing",
+    desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property.",
+    bullets: ["Removes mold & mildew", "Restores surfaces to like-new", "Driveways, walls & siding"],
+  },
+  {
+    icon: Paintbrush,
+    title: "Cabinet Painting & Refinishing",
+    desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space.",
+    bullets: ["Smooth, durable finish", "Kitchen & bathroom cabinets", "Cost-effective transformation"],
+  },
+];
+
+const ServicesPage = () => (
+  <>
+    <PageBanner
+      title="Our Services"
+      subtitle="High-quality painting and surface improvement services for residential and commercial properties."
+    />
+
+    <section className="section-padding">
+      <div className="container-site space-y-8">
+        {services.map((service, i) => (
+          <AnimatedSection key={service.title} delay={i * 0.05}>
+            <div className="bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-shadow duration-200 p-6 md:p-8 grid md:grid-cols-[1fr_auto] gap-6 items-start">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <service.icon size={24} className="text-primary" />
+                </div>
+                <h2 className="font-sans font-bold text-2xl md:text-3xl tracking-tight text-foreground mb-3">
+                  {service.title}
+                </h2>
+                <p className="font-body text-base leading-relaxed text-muted-foreground mb-4">
+                  {service.desc}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.bullets.map((b) => (
+                    <li key={b} className="flex items-center gap-2 text-sm font-body text-foreground/80">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="md:self-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98] whitespace-nowrap"
+                >
+                  Request Estimate <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        ))}
+      </div>
+    </section>
+
+    {/* Service Areas */}
+    <section className="section-padding bg-muted/50">
+      <div className="container-site">
+        <AnimatedSection>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-4">
+              Service Areas
+            </h2>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
+              Proudly serving Winter Garden, FL and surrounding areas.
+            </p>
+            <div className="bg-card rounded-xl shadow-card p-8">
+              <p className="font-body text-base text-muted-foreground leading-relaxed mb-6">
+                Need help choosing the right service? Contact us today and we'll guide you through the best solution for your property.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98]"
+              >
+                Contact Us Today
+              </Link>
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  </>
+);
+
+export default ServicesPage;
