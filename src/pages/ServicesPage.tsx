@@ -4,34 +4,45 @@ import PageBanner from "@/components/PageBanner";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 
+import interiorImg from "@/assets/interior-painting.jpg";
+import exteriorImg from "@/assets/exterior-painting.jpg";
+import epoxyImg from "@/assets/epoxy-floor.jpg";
+import pressureImg from "@/assets/pressure-washing.jpg";
+import cabinetImg from "@/assets/cabinet-painting.jpg";
+
 const services = [
   {
     icon: Paintbrush,
     title: "Interior Painting",
+    img: interiorImg,
     desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again.",
     bullets: ["Clean and professional results", "Walls, ceilings, trim & doors", "Ideal for homes and businesses"],
   },
   {
     icon: Home,
     title: "Exterior Painting",
+    img: exteriorImg,
     desc: "Protect and beautify your property with our professional exterior painting services. We use durable, high-quality materials to ensure a long-lasting finish that withstands weather and time.",
     bullets: ["Weather-resistant finishes", "Durable, high-quality materials", "Enhances curb appeal"],
   },
   {
     icon: Droplets,
     title: "Epoxy Floor Coatings",
+    img: epoxyImg,
     desc: "Our epoxy flooring systems are perfect for garages, patios, and commercial spaces. They provide a strong, durable, and modern finish that is easy to maintain and resistant to stains and damage.",
     bullets: ["Stain and damage resistant", "Modern, sleek appearance", "Perfect for garages & commercial"],
   },
   {
     icon: SprayCan,
     title: "Pressure Washing",
+    img: pressureImg,
     desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property.",
     bullets: ["Removes mold & mildew", "Restores surfaces to like-new", "Driveways, walls & siding"],
   },
   {
     icon: Paintbrush,
     title: "Cabinet Painting & Refinishing",
+    img: cabinetImg,
     desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space.",
     bullets: ["Smooth, durable finish", "Kitchen & bathroom cabinets", "Cost-effective transformation"],
   },
@@ -45,11 +56,19 @@ const ServicesPage = () => (
     />
 
     <section className="section-padding">
-      <div className="container-site space-y-8">
+      <div className="container-site space-y-10">
         {services.map((service, i) => (
           <AnimatedSection key={service.title} delay={i * 0.05}>
-            <div className="bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-shadow duration-200 p-6 md:p-8 grid md:grid-cols-[1fr_auto] gap-6 items-start">
-              <div>
+            <div className="bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-shadow duration-200 overflow-hidden grid md:grid-cols-[1fr_1fr] items-stretch">
+              <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className={`p-6 md:p-8 flex flex-col justify-center ${i % 2 === 1 ? "md:order-1" : ""}`}>
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <service.icon size={24} className="text-primary" />
                 </div>
@@ -67,14 +86,14 @@ const ServicesPage = () => (
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="md:self-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98] whitespace-nowrap"
-                >
-                  Request Estimate <ArrowRight size={16} />
-                </Link>
+                <div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98]"
+                  >
+                    Request Estimate <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </div>
           </AnimatedSection>
