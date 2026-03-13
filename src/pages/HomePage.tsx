@@ -9,10 +9,10 @@ import exteriorImg from "@/assets/exterior-painting.jpg";
 import epoxyImg from "@/assets/epoxy-floor.jpg";
 import pressureImg from "@/assets/pressure-washing.jpg";
 import cabinetImg from "@/assets/cabinet-painting.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery7 from "@/assets/gallery-7.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
+const gallery1 = "/lovable-uploads/079b9e6a-73da-47e8-a06f-9928235327ec.png";
+const gallery2 = "/lovable-uploads/c103a4a5-0977-4e2e-9722-f22494d70ff3.png";
+const gallery7 = "/lovable-uploads/c20fd364-e9ff-4e5f-83db-2754bec9438c.png";
+const gallery5 = "/lovable-uploads/a430cd09-9737-4e07-bd0e-1bb02d228ccd.png";
 
 const services = [
 {
