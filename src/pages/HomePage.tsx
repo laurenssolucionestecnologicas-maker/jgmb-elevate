@@ -15,36 +15,37 @@ const gallery7 = "/lovable-uploads/c20fd364-e9ff-4e5f-83db-2754bec9438c.png";
 const gallery5 = "/lovable-uploads/a430cd09-9737-4e07-bd0e-1bb02d228ccd.png";
 
 const services = [
-{
-  icon: Paintbrush,
-  title: "Interior Painting",
-  img: interiorImg,
-  desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again."
-},
-{
-  icon: Home,
-  title: "Exterior Painting",
-  img: exteriorImg,
-  desc: "Protect and beautify your property with our professional exterior painting services. We use durable, high-quality materials to ensure a long-lasting finish that withstands weather and time."
-},
-{
-  icon: Droplets,
-  title: "Epoxy Floor Coatings",
-  img: epoxyImg,
-  desc: "Our epoxy flooring systems are perfect for garages, patios, and commercial spaces. They provide a strong, durable, and modern finish that is easy to maintain and resistant to stains and damage."
-},
-{
-  icon: SprayCan,
-  title: "Pressure Washing",
-  img: pressureImg,
-  desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property."
-},
-{
-  icon: Paintbrush,
-  title: "Cabinet Painting & Refinishing",
-  img: cabinetImg,
-  desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space."
-}];
+  {
+    icon: Paintbrush,
+    title: "Interior Painting",
+    img: interiorImg,
+    desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again."
+  },
+  {
+    icon: Home,
+    title: "Exterior Painting",
+    img: "/lovable-uploads/0edda452-bbc2-4400-a469-3a6189039451.png",
+    desc: "Protect and beautify your property with our professional exterior painting services. We use durable, high-quality materials to ensure a long-lasting finish that withstands weather and time."
+  },
+  {
+    icon: Droplets,
+    title: "Epoxy Floor Coatings",
+    img: "/lovable-uploads/98cfd60d-e4cb-474d-8452-ea95669b2869.png",
+    desc: "Our epoxy flooring systems are perfect for garages, patios, and commercial spaces. They provide a strong, durable, and modern finish that is easy to maintain and resistant to stains and damage."
+  },
+  {
+    icon: SprayCan,
+    title: "Pressure Washing",
+    img: pressureImg,
+    desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property."
+  },
+  {
+    icon: Paintbrush,
+    title: "Cabinet Painting & Refinishing",
+    img: "/lovable-uploads/bde6c085-fdf8-42e0-9be7-ff8c18dd596c.png",
+    desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space."
+  }
+];
 
 
 const whyChoose = [
