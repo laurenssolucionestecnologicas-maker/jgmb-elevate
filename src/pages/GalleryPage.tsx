@@ -8,7 +8,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
+import gallery4 from "@/assets/9.png";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
@@ -16,7 +16,7 @@ import interiorImg from "@/assets/interior-painting.jpg";
 import exteriorImg from "@/assets/exterior-painting.jpg";
 import epoxyImg from "@/assets/epoxy-floor.jpg";
 import pressureImg from "@/assets/pressure-washing.jpg";
-import cabinetImg from "@/assets/cabinet-painting.jpg";
+import cabinetImg from "@/assets/9.png";
 
 const categories = ["All", "Interior", "Exterior", "Epoxy", "Cabinets", "Pressure Washing"] as const;
 
@@ -27,14 +27,10 @@ const galleryItems = [
   { src: "/lovable-uploads/gallery-ext-4.png", alt: "Casa de dos pisos pintada con acentos turquesa", category: "Exterior" },
   { src: gallery1, alt: "Living room with sage green accent wall", category: "Interior" },
   { src: gallery2, alt: "Freshly painted two-story exterior", category: "Exterior" },
-  { src: interiorImg, alt: "Professional interior painting", category: "Interior" },
-  { src: gallery5, alt: "Epoxy garage floor with car", category: "Epoxy" },
   { src: cabinetImg, alt: "White kitchen cabinet refinishing", category: "Cabinets" },
   { src: pressureImg, alt: "Pressure washing driveway before and after", category: "Pressure Washing" },
   { src: gallery7, alt: "Navy blue bedroom accent wall", category: "Interior" },
   { src: exteriorImg, alt: "Exterior house painting on ladder", category: "Exterior" },
-  { src: gallery3, alt: "Commercial office painting", category: "Interior" },
-  { src: gallery4, alt: "Bathroom remodel with fresh paint", category: "Cabinets" },
   { src: epoxyImg, alt: "Commercial epoxy floor coating", category: "Epoxy" },
   { src: gallery6, alt: "Pressure washed brick wall", category: "Pressure Washing" },
 ];
