@@ -21,6 +21,10 @@ import cabinetImg from "@/assets/cabinet-painting.jpg";
 const categories = ["All", "Interior", "Exterior", "Epoxy", "Cabinets", "Pressure Washing"] as const;
 
 const galleryItems = [
+  { src: "/lovable-uploads/gallery-ext-1.png", alt: "Casa pintada exterior con entrada elegante", category: "Exterior" },
+  { src: "/lovable-uploads/gallery-ext-2.png", alt: "Puertas dobles pintadas en azul con herrajes dorados", category: "Exterior" },
+  { src: "/lovable-uploads/gallery-ext-3.png", alt: "Fachada exterior pintada con ventanas negras", category: "Exterior" },
+  { src: "/lovable-uploads/gallery-ext-4.png", alt: "Casa de dos pisos pintada con acentos turquesa", category: "Exterior" },
   { src: gallery1, alt: "Living room with sage green accent wall", category: "Interior" },
   { src: gallery2, alt: "Freshly painted two-story exterior", category: "Exterior" },
   { src: interiorImg, alt: "Professional interior painting", category: "Interior" },
