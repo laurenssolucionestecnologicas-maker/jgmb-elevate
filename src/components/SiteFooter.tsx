@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { Instagram, Facebook, Phone } from "lucide-react";
+
+// Custom TikTok icon since lucide doesn't have it
+const TikTokIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 const quickLinks = [
   { to: "/", label: "Home" },
@@ -63,7 +71,51 @@ const SiteFooter = () => (
           <ul className="space-y-3 text-sm opacity-70">
             <li>jgmb.painting@gmail.com</li>
             <li>Winter Garden, FL</li>
+            <li>
+              <a href="tel:+14075800112" className="hover:opacity-100 transition-opacity">
+                +1 (407) 580-0112
+              </a>
+            </li>
           </ul>
+          
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-3 mt-4">
+            <a 
+              href="https://www.instagram.com/jg.mb.painting/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a 
+              href="https://www.facebook.com/people/JGMB-Painting/61572885038494/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook size={18} />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@jgmb.painting/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              aria-label="TikTok"
+            >
+              <TikTokIcon size={18} />
+            </a>
+            <a 
+              href="tel:+14075800112" 
+              className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              aria-label="Phone"
+            >
+              <Phone size={18} />
+            </a>
+          </div>
+          
           <Link
             to="/contact"
             className="inline-flex mt-6 items-center justify-center px-6 py-2.5 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98]"
