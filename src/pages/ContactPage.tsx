@@ -77,7 +77,9 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-sans font-semibold text-sm text-foreground">Phone</p>
-                      <p className="text-sm text-muted-foreground">(Add business phone number)</p>
+                      <a href="tel:+14075800112" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        +1 (407) 580-0112
+                      </a>
                     </div>
                   </div>
                 </div>
