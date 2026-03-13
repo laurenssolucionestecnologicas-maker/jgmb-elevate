@@ -20,7 +20,7 @@ const SiteHeader = () => {
     <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-sm border-b border-border">
       <div className="container-site flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="JGMB Painting logo" className="h-10 md:h-12 w-auto" />
+          <img src={logo} alt="JGMB Painting logo" className="h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Desktop nav */}

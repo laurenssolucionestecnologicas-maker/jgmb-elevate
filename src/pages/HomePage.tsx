@@ -66,7 +66,14 @@ const HomePage = () => {
       {/* Hero */}
       <section className="relative min-h-[75svh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Freshly painted modern living room" className="w-full h-full object-cover" loading="eager" />
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-foreground/60" />
         </div>
         <div className="relative container-site py-20 md:py-28">
