@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 
 import interiorImg from "@/assets/interior-painting.jpg";
-import exteriorImg from "@/assets/exterior-painting.jpg";
-import epoxyImg from "@/assets/epoxy-floor.jpg";
+import exteriorImg from "/lovable-uploads/bb7fb72f-9749-49b4-b576-54d6a4f93cc4.png";
+import epoxyImg from "/lovable-uploads/bdab53b0-b946-4be9-aaea-27a70ce90d34.png";
 import pressureImg from "@/assets/pressure-washing.jpg";
-import cabinetImg from "@/assets/cabinet-painting.jpg";
+import cabinetImg from "/lovable-uploads/daea4bb3-0a2c-415b-a352-1ce8622dd0f5.png";
 
 const services = [
   {
