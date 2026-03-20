@@ -5,17 +5,17 @@ import { X } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import AnimatedSection from "@/components/AnimatedSection";
 
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
+import gallery1 from "@/assets/IMG_6909.jpg";
+import gallery2 from "@/assets/IMG_7822.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/9.png";
 import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-import gallery7 from "@/assets/gallery-7.jpg";
+import gallery6 from "@/assets/123.jpg";
+import gallery7 from "@/assets/1254.jpg";
 import interiorImg from "@/assets/interior-painting.jpg";
-import exteriorImg from "@/assets/exterior-painting.jpg";
-import epoxyImg from "@/assets/epoxy-floor.jpg";
-import pressureImg from "@/assets/pressure-washing.jpg";
+import exteriorImg from "@/assets/IMG_4265.jpg";
+import epoxyImg from "@/assets/IMG_4154.jpg";
+import pressureImg from "@/assets/IMG_6115.jpg";
 import cabinetImg from "@/assets/9.png";
 
 const categories = ["All", "Interior", "Exterior", "Epoxy", "Cabinets", "Pressure Washing"] as const;
