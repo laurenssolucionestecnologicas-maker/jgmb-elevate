@@ -36,14 +36,14 @@ const AboutPage = () =>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <img src={aboutTeam} alt="JGMB Painting team" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" />
+            <img alt="JGMB Painting team" className="w-full rounded-2xl aspect-[4/3] shadow-elevated object-contain" src="/lovable-uploads/f69432df-4e2d-4168-9bcd-697e733e7c2d.jpg" />
           </AnimatedSection>
         </div>
 
         <AnimatedSection className="mt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <img alt="Painting crew at work" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" src="/lovable-uploads/46ef61b2-03ac-4949-b2e3-fde7ce86dd09.png" />
+              <img alt="Painting crew at work" className="w-full rounded-2xl object-cover aspect-[4/3] shadow-elevated" src="/lovable-uploads/4dfe4528-2c65-45b5-bddb-728ba70b9724.jpg" />
             </div>
             <div className="order-1 lg:order-2 space-y-5 font-body text-lg leading-relaxed text-muted-foreground">
               <p>Our mission is simple: to provide honest work, excellent craftsmanship, and complete customer satisfaction. We believe that integrity and professionalism are the keys to making our clients happy, and that's the standard we bring to every job.</p>
@@ -105,7 +105,7 @@ const AboutPage = () =>
           </div>
         </AnimatedSection>
         <AnimatedSection>
-          <img src={gallery1} alt="Beautiful painted living room" className="w-full rounded-2xl object-cover aspect-[21/9] shadow-elevated" loading="lazy" />
+          <img alt="Beautiful painted living room" className="w-full rounded-2xl object-cover aspect-[21/9] shadow-elevated" loading="lazy" src="/lovable-uploads/41eec4a5-fe08-44d4-b216-1ab86a6c1ead.jpg" />
         </AnimatedSection>
       </div>
     </section>
