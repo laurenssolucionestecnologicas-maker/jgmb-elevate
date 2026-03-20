@@ -33,7 +33,7 @@ const services = [
 {
   icon: SprayCan,
   title: "Pressure Washing",
-  img: pressureImg,
+  img: "/lovable-uploads/268e3ee7-7818-4bff-bc72-da301c9031e5.jpg",
   desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property."
 },
 {
