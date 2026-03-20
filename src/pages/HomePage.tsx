@@ -4,8 +4,6 @@ import { CheckCircle, Shield, Clock, Paintbrush, Droplets, SprayCan, Home, Star,
 import AnimatedSection from "@/components/AnimatedSection";
 import heroBg from "@/assets/hola.png";
 import aboutTeam from "@/assets/about-team.jpg";
-import interiorImg from "@/assets/interior-painting.jpg";
-import pressureImg from "@/assets/pressure-washing.jpg";
 const gallery1 = "/lovable-uploads/079b9e6a-73da-47e8-a06f-9928235327ec.png";
 const gallery2 = "/lovable-uploads/c103a4a5-0977-4e2e-9722-f22494d70ff3.png";
 const gallery7 = "/lovable-uploads/c20fd364-e9ff-4e5f-83db-2754bec9438c.png";
@@ -15,7 +13,7 @@ const services = [
 {
   icon: Paintbrush,
   title: "Interior Painting",
-  img: interiorImg,
+  img: "/lovable-uploads/61f9be64-cee8-4409-94db-901da17ace24.jpg",
   desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again."
 },
 {
@@ -33,7 +31,7 @@ const services = [
 {
   icon: SprayCan,
   title: "Pressure Washing",
-  img: pressureImg,
+  img: "/lovable-uploads/268e3ee7-7818-4bff-bc72-da301c9031e5.jpg",
   desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property."
 },
 {
