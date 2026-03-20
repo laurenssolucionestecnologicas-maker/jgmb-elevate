@@ -15,7 +15,7 @@ const services = [
 {
   icon: Paintbrush,
   title: "Interior Painting",
-  img: interiorImg,
+  img: "/lovable-uploads/61f9be64-cee8-4409-94db-901da17ace24.jpg",
   desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again."
 },
 {
