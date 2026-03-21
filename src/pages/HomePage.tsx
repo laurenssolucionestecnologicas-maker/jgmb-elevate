@@ -147,7 +147,7 @@ const HomePage = () => {
       {/* About Preview with image */}
       <section className="section-padding">
         <div className="container-site">
-          <div className="grid lg:grid-cols-2 gap-12 items-center border-2 border-solid font-light">
+          <div className="grid lg:grid-cols-2 gap-12 items-center border-solid font-light rounded-none shadow-none border-0">
             <AnimatedSection>
               <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">About Our Company</p>
               <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-6">

@@ -70,7 +70,7 @@ const SiteFooter = () =>
           <h4 className="font-sans font-semibold text-sm mb-4 uppercase tracking-wider opacity-50">Contact</h4>
           <ul className="space-y-3 text-sm opacity-70">
             <li>jgmb.painting@gmail.com</li>
-            <li>Winter Garden, FL</li>
+            <li>Central Florida </li>
             <li>
               <a href="tel:+14075800112" className="hover:opacity-100 transition-opacity">
                 +1 (321) 287-7179
