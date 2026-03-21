@@ -11,7 +11,7 @@ const ContactPage = () => {
     phone: "",
     service: "",
     details: "",
-    contactMethod: "email",
+    contactMethod: "email"
   });
   const [submitting, setSubmitting] = useState(false);
 
@@ -34,14 +34,14 @@ const ContactPage = () => {
   };
 
   const inputClass =
-    "w-full rounded-lg bg-background ring-1 ring-input px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-shadow duration-200";
+  "w-full rounded-lg bg-background ring-1 ring-input px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-shadow duration-200";
 
   return (
     <>
       <PageBanner
         title="Contact JGMB Painting"
-        subtitle="Let's talk about your next painting or remodeling project. Request your free estimate today."
-      />
+        subtitle="Let's talk about your next painting or remodeling project. Request your free estimate today." />
+      
 
       <section className="section-padding">
         <div className="container-site">
@@ -68,7 +68,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-sans font-semibold text-sm text-foreground">Location</p>
-                      <p className="text-sm text-muted-foreground">Winter Garden, FL</p>
+                      <p className="text-sm text-muted-foreground">Central Florida </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -78,7 +78,7 @@ const ContactPage = () => {
                     <div>
                       <p className="font-sans font-semibold text-sm text-foreground">Phone</p>
                       <a href="tel:+14075800112" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        +1 (407) 580-0112
+                        +1 (321) 287-7179
                       </a>
                     </div>
                   </div>
@@ -88,7 +88,7 @@ const ContactPage = () => {
                 <div className="mt-8 rounded-xl bg-muted/50 border border-border overflow-hidden h-56 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin size={32} className="text-primary mx-auto mb-2" />
-                    <p className="font-sans font-semibold text-sm text-foreground">Winter Garden, FL</p>
+                    <p className="font-sans font-semibold text-sm text-foreground">Central Florida</p>
                     <p className="text-xs text-muted-foreground">Serving the surrounding areas</p>
                   </div>
                 </div>
@@ -135,26 +135,26 @@ const ContactPage = () => {
                   <div>
                     <label className="block text-xs font-semibold text-foreground mb-1.5">Preferred Contact Method</label>
                     <div className="flex gap-4">
-                      {["email", "phone"].map((m) => (
-                        <label key={m} className="flex items-center gap-2 cursor-pointer">
+                      {["email", "phone"].map((m) =>
+                      <label key={m} className="flex items-center gap-2 cursor-pointer">
                           <input
-                            type="radio"
-                            name="contactMethod"
-                            value={m}
-                            checked={form.contactMethod === m}
-                            onChange={handleChange}
-                            className="accent-primary"
-                          />
+                          type="radio"
+                          name="contactMethod"
+                          value={m}
+                          checked={form.contactMethod === m}
+                          onChange={handleChange}
+                          className="accent-primary" />
+                        
                           <span className="text-sm capitalize font-body">{m}</span>
                         </label>
-                      ))}
+                      )}
                     </div>
                   </div>
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98] disabled:opacity-60"
-                  >
+                    className="w-full px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-[transform,filter] duration-200 hover:brightness-110 active:scale-[0.98] disabled:opacity-60">
+                    
                     {submitting ? "Sending..." : "Request Free Estimate"}
                   </button>
                 </form>
@@ -177,8 +177,8 @@ const ContactPage = () => {
           </AnimatedSection>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 };
 
 export default ContactPage;
