@@ -13,7 +13,7 @@ const services = [
 {
   icon: Paintbrush,
   title: "Interior Painting",
-  img: "/lovable-uploads/61f9be64-cee8-4409-94db-901da17ace24.jpg",
+  img: "/lovable-uploads/e81d9fae-2625-476d-a88e-cdadca156ca8.jpg",
   desc: "We provide clean, precise interior painting that refreshes and enhances the look of your home or business. From walls and ceilings to trim and doors, we make your space look new again."
 },
 {
@@ -31,7 +31,7 @@ const services = [
 {
   icon: SprayCan,
   title: "Pressure Washing",
-  img: "/lovable-uploads/268e3ee7-7818-4bff-bc72-da301c9031e5.jpg",
+  img: "/lovable-uploads/ecfdb259-d6d6-4be1-a776-19d9657b05de.jpg",
   desc: "We remove dirt, mold, mildew, and stains from surfaces like driveways, walls, sidewalks, and exterior siding, restoring the clean look of your property."
 },
 {
