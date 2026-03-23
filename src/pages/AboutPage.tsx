@@ -36,7 +36,7 @@ const AboutPage = () =>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <img alt="JGMB Painting team" className="w-full rounded-2xl aspect-[4/3] shadow-elevated object-contain" src="/lovable-uploads/f69432df-4e2d-4168-9bcd-697e733e7c2d.jpg" />
+            <img alt="JGMB Painting team" className="w-full rounded-2xl aspect-[4/3] shadow-elevated object-contain" src="/lovable-uploads/1.png" />
           </AnimatedSection>
         </div>
 
