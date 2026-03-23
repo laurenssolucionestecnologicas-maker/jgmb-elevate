@@ -96,7 +96,7 @@ const HomePage = () => {
             <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all duration-200">Learn More About Us <ArrowRight size={16} /></Link>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <img alt="JGMB Painting team" src="/lovable-uploads/72148218-b427-4d48-beb0-ec9fc6724ce0.jpg" className="w-full aspect-[4/3] object-contain rounded-xl shadow-card" />
+            <img alt="JGMB Painting team" src="/lovable-uploads/1.png" className="w-full aspect-[4/3] object-contain rounded-xl shadow-card" />
           </AnimatedSection>
         </div>
       </section>
