@@ -7,8 +7,10 @@ import { motion } from "framer-motion";
 import interiorImg from "/lovable-uploads/7f64d4a7-9d9d-46cc-994f-c464ca1af955.jpg";
 import exteriorImg from "/lovable-uploads/bb7fb72f-9749-49b4-b576-54d6a4f93cc4.png";
 import epoxyImg from "/lovable-uploads/bdab53b0-b946-4be9-aaea-27a70ce90d34.png";
-import pressureImg from "/lovable-uploads/093c624d-0602-4657-9cb0-cf4d72385307.jpg";
+import pressureImg from "/lovable-uploads/1234.jpg";
 import cabinetImg from "/lovable-uploads/daea4bb3-0a2c-415b-a352-1ce8622dd0f5.png";
+import solarImg from "/lovable-uploads/1235.png";
+
 
 const services = [
 {
@@ -45,6 +47,14 @@ const services = [
   img: cabinetImg,
   desc: "Give your kitchen or bathroom a fresh, modern look without replacing your cabinets. Our cabinet painting service delivers a smooth and durable finish that transforms your space.",
   bullets: ["Smooth, durable finish", "Kitchen & bathroom cabinets", "Cost-effective transformation"]
+}
+,
+{
+  icon: Paintbrush,
+  title: "Solar Panel Cleaning",
+  img: solarImg,
+  desc: "If your panels are covered in dust, pollen, or bird droppings, they can lose up to 20% or more of their efficiency. That means you're paying for solar... but not getting the full benefit.",
+  bullets: ["Increased energy output", "Better return on your solar investment", "Spot-free, streak-free panels"]
 }];
 
 
