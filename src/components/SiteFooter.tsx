@@ -22,7 +22,12 @@ const serviceLinks = [
 { to: "/services", label: "Exterior Painting" },
 { to: "/services", label: "Epoxy Floors" },
 { to: "/services", label: "Pressure Washing" },
-{ to: "/services", label: "Cabinet Painting" }];
+{ to: "/services", label: "Cabinet Painting" },
+{ to: "/services", label: "Solar Cleaning" },
+
+
+];
+
 
 
 const SiteFooter = () =>

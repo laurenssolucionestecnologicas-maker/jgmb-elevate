@@ -7,16 +7,20 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 import gallery1 from "@/assets/IMG_6909.jpg";
 import gallery2 from "@/assets/IMG_7822.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/9.png";
-import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/123.jpg";
 import gallery7 from "@/assets/1254.jpg";
-import interiorImg from "@/assets/interior-painting.jpg";
 import exteriorImg from "@/assets/IMG_4265.jpg";
 import epoxyImg from "@/assets/IMG_4154.jpg";
 import pressureImg from "@/assets/IMG_6115.jpg";
 import cabinetImg from "@/assets/9.png";
+import cabinet1Img from "@/assets/Cabinets.jpg";
+import epoxy1Img from "@/assets/epoxy1.jpg";
+import epoxy2Img from "@/assets/epoxy2.jpg";
+import gallery8 from "@/assets/interior1.jpg.jpeg";
+import gallery9 from "@/assets/interior2.jpg.jpeg";
+import gallery10 from "@/assets/interior3.jpg.jpeg";
+
+
 
 const categories = ["All", "Interior", "Exterior", "Epoxy", "Cabinets", "Pressure Washing"] as const;
 
@@ -28,11 +32,23 @@ const galleryItems = [
   { src: gallery1, alt: "Living room with sage green accent wall", category: "Interior" },
   { src: gallery2, alt: "Freshly painted two-story exterior", category: "Exterior" },
   { src: cabinetImg, alt: "White kitchen cabinet refinishing", category: "Cabinets" },
+  { src: cabinet1Img, alt: "White kitchen cabinet refinishing", category: "Cabinets" },
+  { src: epoxy2Img, alt: "Commercial expoxy 2", category: "Epoxy" },
   { src: pressureImg, alt: "Pressure washing driveway before and after", category: "Pressure Washing" },
   { src: gallery7, alt: "Navy blue bedroom accent wall", category: "Interior" },
   { src: exteriorImg, alt: "Exterior house painting on ladder", category: "Exterior" },
   { src: epoxyImg, alt: "Commercial epoxy floor coating", category: "Epoxy" },
   { src: gallery6, alt: "Pressure washed brick wall", category: "Pressure Washing" },
+  { src: epoxy1Img, alt: "Commercial epoxy floor coating", category: "Epoxy" },
+  { src: gallery8, alt: "Navy blue bedroom accent wall", category: "Interior" },
+  { src: gallery9, alt: "Navy blue bedroom accent wall", category: "Interior" },
+  { src: gallery10, alt: "Navy blue bedroom accent wall", category: "Interior" },
+         
+  
+  
+  
+
+    
 ];
 
 const GalleryPage = () => {
