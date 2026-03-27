@@ -19,7 +19,12 @@ const SiteHeader = () => {
     <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-sm border-b border-border">
       <div className="container-site flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <img alt="JGMB Painting logo" className="h-10 md:h-12 w-auto object-fill border-0 border-none rounded-none shadow-none" src="/lovable-uploads/4e8b018b-234f-4270-ae1c-a51098ef3566.png" />
+          {/* Cambia esa línea por esta: */}
+<img 
+  alt="JGMB Painting logo" 
+  className="h-14 md:h-20 w-auto object-contain border-0 border-none rounded-none shadow-none" 
+  src="/lovable-uploads/4e8b018b-234f-4270-ae1c-a51098ef3566.png" 
+/>
         </Link>
 
         {/* Desktop nav */}
