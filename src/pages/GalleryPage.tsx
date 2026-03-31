@@ -20,8 +20,6 @@ import gallery8 from "@/assets/interior1.jpg.jpeg";
 import gallery9 from "@/assets/interior2.jpg.jpeg";
 import gallery10 from "@/assets/interior3.jpg.jpeg";
 
-
-
 const categories = ["All", "Interior", "Exterior", "Epoxy", "Cabinets", "Pressure Washing"] as const;
 
 const galleryItems = [
@@ -33,29 +31,28 @@ const galleryItems = [
   { src: gallery2, alt: "Freshly painted two-story exterior", category: "Exterior" },
   { src: cabinetImg, alt: "White kitchen cabinet refinishing", category: "Cabinets" },
   { src: cabinet1Img, alt: "White kitchen cabinet refinishing", category: "Cabinets" },
-  { src: epoxy2Img, alt: "Commercial expoxy 2", category: "Epoxy" },
+  { src: epoxy2Img, alt: "Commercial epoxy 2", category: "Epoxy" },
   { src: pressureImg, alt: "Pressure washing driveway before and after", category: "Pressure Washing" },
   { src: gallery7, alt: "Navy blue bedroom accent wall", category: "Interior" },
   { src: exteriorImg, alt: "Exterior house painting on ladder", category: "Exterior" },
   { src: epoxyImg, alt: "Commercial epoxy floor coating", category: "Epoxy" },
   { src: gallery6, alt: "Pressure washed brick wall", category: "Pressure Washing" },
   { src: epoxy1Img, alt: "Commercial epoxy floor coating", category: "Epoxy" },
-  { src: gallery8, alt: "Navy blue bedroom accent wall", category: "Interior" },
-  { src: gallery9, alt: "Navy blue bedroom accent wall", category: "Interior" },
-  { src: gallery10, alt: "Navy blue bedroom accent wall", category: "Interior" },
-         
-  
-  
-  
-
-    
+  { src: gallery8, alt: "Interior design", category: "Interior" },
+  { src: gallery9, alt: "Interior design", category: "Interior" },
+  { src: gallery10, alt: "Interior design", category: "Interior" },
 ];
+
+type GalleryItem = typeof galleryItems[number];
 
 const GalleryPage = () => {
   const [filter, setFilter] = useState<string>("All");
-  const [lightbox, setLightbox] = useState<number | null>(null);
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
 
-  const filtered = filter === "All" ? galleryItems : galleryItems.filter((g) => g.category === filter);
+  const filtered =
+    filter === "All"
+      ? galleryItems
+      : galleryItems.filter((g) => g.category === filter);
 
   return (
     <>
@@ -86,21 +83,18 @@ const GalleryPage = () => {
           </AnimatedSection>
 
           {/* Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          >
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <AnimatePresence mode="popLayout">
-              {filtered.map((item, i) => (
+              {filtered.map((item) => (
                 <motion.div
-                  key={item.alt}
+                  key={item.src}
                   layout
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
                   className="relative group cursor-pointer overflow-hidden rounded-xl"
-                  onClick={() => setLightbox(i)}
+                  onClick={() => setLightbox(item)}
                 >
                   <img
                     src={item.src}
@@ -124,7 +118,7 @@ const GalleryPage = () => {
 
       {/* Lightbox */}
       <AnimatePresence>
-        {lightbox !== null && (
+        {lightbox && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -139,12 +133,13 @@ const GalleryPage = () => {
             >
               <X size={32} />
             </button>
+
             <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              src={filtered[lightbox]?.src}
-              alt={filtered[lightbox]?.alt}
+              src={lightbox.src}
+              alt={lightbox.alt}
               className="max-w-full max-h-[85vh] object-contain rounded-xl"
               onClick={(e) => e.stopPropagation()}
             />
